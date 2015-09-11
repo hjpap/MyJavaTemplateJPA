@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.about {}
+.banner { width:100%; height:280px; background-color:#bf9968; background-image:url(../images/about/banner.jpg); background-position:center center; background-repeat:no-repeat;}
+
+.amenu { }
+.about .amenu { height:60px; width:100%;border-bottom:solid 1px #e9e9e9;}
+.about .amenu ul { padding-left:0px;}
+.about .amenu ul li { float:left; position:relative; margin:0px 19px;}
+.about .amenu ul li a { text-align:center; line-height:60px; height:60px; float:left; color:#606060; font-size:17px; padding:0px 15px;}
+.about .amenu ul li a:hover { color:#f4a51d;}
+.about .amenu ul li.selected a { border-bottom:solid 5px #f4a51d;line-height:60px; height:55px; }
+
+.main { padding:30px 0px;}
+
+
+/*关于我们页面*/
+.aboutus {}
+.aboutus h1 { color:#f4a51d; font-size:32px; margin-bottom:10px;}
+.aboutus h3 { color:#f4a51d; font-size:32px; margin-bottom:10px;}
+
+.aboutus .des { overflow:hidden; padding:30px 0px; width:780px; margin:0px auto;}
+.aboutus .des .destext { width:390px; float:left;}
+.aboutus .des .destextrigth { width:390px; float:right;}
+.aboutus .des .desimg { width:360px; float:right;}
+
+.aboutus .logodes {overflow:hidden; padding:30px 0px 0px 0px; width:780px; margin:0px auto;}
+.aboutus .logodes .logodesimg {width:270px; float:left;}
+.aboutus .logodes .logodestext {width:480px; float:right;}
+
+.aboutus .feature { text-align:center; padding:25px 0px;}
+.aboutus .feature .box { padding-bottom:40px;}
+
+/*管理团队*/
+.aboutTeam { width:800px; margin:0px auto;}
+.aboutTeam h1 { color:#f4a51d; font-size:32px; margin-bottom:10px; height:35px; line-height:35px; text-align:center;}
+.aboutTeam p { text-indent:2em;}
+
+/*最新动态*/
+.aboutNews {}
+.aboutNews h1 { color:#f4a51d; font-size:32px; margin-bottom:10px; height:35px; line-height:35px; text-align:center;}
+
+.newsli { padding-top:30px; padding-bottom:30px;}
+.newsli .newslibox { padding-bottom:30px;}
+.newsli .newslibox .tit { position:relative; border-bottom: 1px dashed #ffdc9f; padding-bottom:10px; margin-bottom:10px;}
+.newsli .newslibox .tit h3 { width:740px; float:left;font-size:22px; }
+.newsli .newslibox .tit a { color:#555555;}
+.newsli .newslibox .tit a:hover { color:#000000;}
+.newsli .newslibox .tit .tittime { font-size:14px; color:#a1a1a1; float:right; padding-top:7px;}
+.newsli .newslibox .des { color:#757575; font-size:16px;}
+.newsli .newslibox .view { padding-top:10px; text-align:right;}
+
+.newsli .pageturning { width:100%; overflow:hidden;}
+.newsli .pageturning .pager { padding-left:280px; padding-top:40px;}
+
+.newspage { padding-top:10px; padding-bottom:30px;}
+.newspage img { max-width:100%; height:auto;}
+.newspage h1{border-bottom: 1px solid #ddd;padding-bottom: 15px; margin-bottom:15px; font-size:24px;}
+.newspage h2{border-bottom: 1px solid #ddd;padding-bottom: 15px; margin-bottom:15px;}
+.newspage .newspage_info { overflow:hidden; color:#afafaf; margin-bottom:15px;}
+.newspage .newspage_bot { overflow:hidden; padding-top:25px;}
+.newspage .newpage_interfix { padding-top:35px;}
+
+
+/*招贤纳士*/
+.aboutInvite {}
+.aboutInvite h1 { color:#f4a51d; font-size:32px; margin-bottom:10px; height:35px; line-height:35px; text-align:center;}
+
+.aboutInvite .Invitebox { padding-bottom:20px;}
+.aboutInvite .Invitebox h2 { color:#f4a51d; font-size:30px; margin-bottom:10px;}
+.aboutInvite .Invitebox h3 { color:#383837; font-size:22px; margin-bottom:10px;}
+.aboutInvite .Invitebox p { margin-bottom:15px; line-height:26px;}
+
+/*联系我们*/
+
+.aboutContact {}
+.aboutContact h1 { color:#f4a51d; font-size:32px; margin-bottom:10px; height:35px; line-height:35px; text-align:center;}
+
+.aboutContact .contactbox {}
+.aboutContact .contactbox h3 { margin-bottom:10px;}
+
+
+/*平台公告*/
+.aboutPartner {}
+.aboutPartner h1 { color:#f4a51d; font-size:32px; margin-bottom:10px; height:35px; line-height:35px; text-align:center;}
+.partner { overflow:hidden; width:100%;}
+.partner .partnerli { overflow:hidden; float:left; width:222px;  height:78px;margin:10px;}
+.partner .partnerli .partnerimg {border:solid 1px #ececec; padding:10px; width:200px; height:56px;}
+	
+	
+	
+	
+	

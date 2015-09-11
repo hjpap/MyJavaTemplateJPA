@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+body { background-color:#f4f4f4;}
+
+@-webkit-keyframes bounce {0%, 20%, 50%, 80%, 100% {-webkit-transform:translateY(0)}40% {-webkit-transform:translateY(-9px)}60% {-webkit-transform:translateY(-3px)}}
+@-moz-keyframes bounce {0%, 20%, 50%, 80%, 100% {-moz-transform:translateY(0)}40% {-moz-transform:translateY(-9px)}60% {-moz-transform:translateY(-3px)}}
+
+/*弹窗*/
+#BuyBox { width:450px;}
+#BuyBox .group {}
+#BuyBox .group .box { line-height:30px;}
+#BuyBox .group .box label { display:inline-block; width:40%; text-align:right; margin-right:10px; color:#747474;}
+#BuyBox .agreement { padding-top:10px; padding-left:80px;}
+#BuyBox .btn { padding-top:20px; text-align:center;}
+
+#BuyBox .subsidy {line-height:23px;font-size:13px;color:#fff;background:#ff5f26;padding-left:5px; padding-right:5px; margin-left:10px; }
+
+/*弹窗公共*/
+.popbox { min-width:400px;}
+.popbox .btn { text-align:center;}
+
+
+/*善林宝页面*/
+
+.slbhd { overflow:hidden; margin-bottom:20px;}
+.slbhd span { display:inline-block; line-height:35px; float:left;}
+.slbhd .tit h1 { margin-bottom:0px;font-size:34px; color:#ffffff; font-weight:normal;}
+.slbhd .warn { height:26px; line-height:26px; background-color:#ff5736; color:#ffffff;padding:0px 10px; margin:5px 0px 0px 15px;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px; border:solid 1px #c83c18;}
+.slbhd .info { float:right; color:#ffffff; font-size:16px; line-height:34px; font-weight:bold;}
+.slbhd .info span { display:inline-block; padding-left:8px; padding-right:8px;}
+.slbhd .info span.icon_Amount_of_investment {background-image: url(../images/loan/icon_Amount_of_investment.png);background-repeat: no-repeat;background-position: left center; padding-left:35px;}
+
+.slbinfo { width:100%; padding:25px 0px 0px 0px;background-image: url(../images/loan/banner.jpg);background-repeat: no-repeat;background-position: center top;}
+.tybinfo { width:100%; padding:25px 0px 0px 0px;background-image: url(../images/loan/banner2.jpg);background-repeat: no-repeat;background-position: center top;}
+
+
+.slb {background-color:#FFF; padding:0px; overflow:hidden; margin-bottom:20px; position:relative; border:1px solid #e9e9e9;}
+
+.slb .info { overflow:hidden; width:600px; float:left;padding:30px 30px 16px 30px;border-right:solid 1px #e9e9e9;}
+.slb .info .lin { overflow:hidden;}
+
+.slb .info .lin .boxone { width:240px;float:left;line-height:30px; border-right:1px dashed #cdcdcd; height:123px;}
+.slb .info .lin .boxone .tit { margin-bottom:5px; font-size:16px;}
+.slb .info .lin .boxone .con { padding-top:5px;color:#fe4f29; overflow:hidden;}
+.slb .info .lin .boxone .con span {font-size:60px; font-style:italic; height:60px; line-height:60px;}
+.slb .info .lin .boxone .con small { font-size:18px;}
+.slb .info .lin .boxone .con .subsidy {line-height:23px;font-size:13px;color:#fff;background:#ff5f26;padding-left:5px; padding-right:5px; float:left; margin-top:5px; }
+.slb:hover .info .lin .boxone .con .subsidy {-webkit-animation:bounce 1s .2s ease both;-moz-animation:bounce 1s .2s ease both}
+
+
+.slb .info .lin .boxpoint { float:right; width:335px;}
+.boxpoint .boxpoint_box {text-align:center;width:105px; float:left;}
+.boxpoint .boxpoint_box i { width:66px; height:66px; display:block;background-image: url(../images/loan/info_icon2.png);background-repeat: no-repeat;background-position: center top; margin:0px auto; margin-bottom:5px;}
+.boxpoint .boxpoint_box i.icon_wen {background-position: center 0px;}
+.boxpoint .boxpoint_box i.icon_huo{background-position: center -66px;}
+.boxpoint .boxpoint_box i.icon_di {background-position: center -132px;}
+.boxpoint .boxpoint_box i.icon_kuai {background-position: center -198px;}
+.boxpoint .boxpoint_box i.icon_an {background-position: center -264px;}
+
+.loanexplain { overflow:hidden; padding:30px; width:600px; border-right:solid 1px #e9e9e9;border-top:solid 1px #e9e9e9;}
+.loanexplain .box { float:left; height:60px;background-image:url("../images/loan/feature.png");background-position: left top;background-repeat:no-repeat; padding-left:80px; padding-top:12px; margin:0px 40px 0px 0px; line-height:24px;}
+.loanexplain .box.quantity {background-position: left -72px;}
+.loanexplain .box.accumulative {background-position: left -144px;}
+.loanexplain .box.last { margin-right:0px;}
+.loanexplain .tit { font-size:16px; color:#2a2929;}
+.loanexplain .con { color:#9e9e9e;}
+
+
+.slb .lier { width:260px; position:absolute; top:30px; right:30px;}
+.slb .lier .introduce {overflow:hidden; border-bottom:solid 1px #ffffff; padding-bottom:10px;}
+.slb .lier .introduce .box {float:left; line-height:24px; width:100%; text-align:right;}
+.slb .lier .introduce .box label { float:left; color:#9b9b9b;}
+.slb .lier .introduce .box span {}
+
+
+
+.slb .lier .buy { color:#747474;}
+.slb .lier .buy .sabox { height:103px; width:100%;}
+.slb .lier .buy .ShareOfPurchase { width:100%;padding-bottom:5px;}
+.slb .lier .buy .ShareOfPurchase label { position:relative; font-size:16px;}
+.slb .lier .buy .ShareOfPurchase span { display:block; color:#fe4f29; font-size:22px; line-height:45px;}
+.slb .lier .buy .ShareOfPurchase .ico_tips {background:url("../images/user/ico_tips.png") no-repeat center center; display:inline-block; width:20px;height:20px;cursor: pointer;}
+.slb .lier .buy .ShareOfPurchase .ico_tips {position:absolute; top:2px; right:-27px;}
+
+.slb .lier .buy .AvailableBalance { width:100%;padding-bottom:5px;}
+.slb .lier .buy .AvailableBalance a { color:#fe4f29;}
+.slb .lier .buy .AvailableBalance label { position:relative; font-size:16px; padding-right:15px;}
+.slb .lier .buy .AvailableBalance span { color:#444444;}
+.slb .lier .buy .AvailableBalance .gorecharge {float:right; display:block; font-size:16px;}
+
+
+.slb .lier .buy .buymoneyform { width:100%; margin-left:auto; margin-right:auto; float:left; }
+.slb .lier .buy .buymoneyform li { margin-bottom:24px;}
+.slb .lier .buy .buymoneyform .input { width:242px; padding:8px; background-color:#ffffff;}
+.slb .lier .buy .buymoneyform .btn { margin-bottom:0px;}
+.slb .lier .buy .buymoneyform .btn .ui-btn {line-height:38px; width:260px; background-color:#ff6948;}
+.slb .lier .buy .buymoneyform .btn .ui-btn:hover { background-color:#fe4f29;}
+.slb .lier .buy .buymoneyform .txtbig { font-size:16px; color:#9b9b9b; position:absolute; top:5px; right:15px;}
+.slb .lier .buy .buymoneyform .ExpectedIncome { text-align:right; width:100%; margin-bottom:5px; margin-top:-20px;}
+.slb .lier .buy .buymoneyform .agreement { padding-bottom:10px; height:10px; line-height:10px; margin-bottom:10px;}
+
+
+
+
+.slbmain { margin-bottom:30px;}
+.slbmain .table{table-layout:fixed;width:100%;line-height:1.5; /*border:1px solid #e6e6e6;*/ font-size:14px;}
+.slbmain .table td{padding:5px 10px;border:2px solid #fff;padding:10px 30px;}
+.slbmain .table tbody tr:nth-child(2n){background:#f5f5f5;}
+.slbmain .table .fblod { font-weight:bold;}
+
+.slbmain .m-table{table-layout:fixed;width:100%;line-height:1.5; /*border:1px solid #e6e6e6;*/ font-size:14px;}
+.slbmain .m-table th{background-color:#f5f5f5; font-size:16px; padding:10px 10px; text-align:center;}
+.slbmain .m-table td{padding:5px 10px;border-bottom:1px dashed #dfdfdf;padding:10px 10px; text-align:center; word-wrap: break-word;}
+.slbmain .m-table tbody tr:hover{background:#f9f9f9;}
+
+.slbmain .RecordDes { font-size:16px; text-align:right; padding-bottom:10px; }
+
+
+.slbmain .faqlin { padding-bottom:30px;}
+.slbmain .faqlin .tcolor {color: #f4a51d; font-size:14px;padding:0px 10px 5px 0px; margin-bottom:5px;}
+.slbmain .faqlin .tit {color: #f4a51d; font-size:16px; border-bottom:dashed 1px #cdcdcd; padding:0px 0px 5px 0px; margin-bottom:5px;}
+.slbmain .faqlin .con {}
+
+
+.slbmain { background-color:#fefefe; padding:0px 0px;background-image:url("../images/product/wpbg.png");background-position: top center;background-repeat:no-repeat;}
+.slbmain .detailBox { overflow:hidden; height:320px;}
+.slbmain .detailBox .con { float:left; padding-left:50px; padding-top:90px;}
+.slbmain .detailBox .con .tit { font-size:34px; margin-bottom:15px; color:#f4a51d;}
+.slbmain .detailBox .con .des { font-size:18px; color:#666666;}
+.slbmain .detailBox.last { border-bottom:0px; margin-bottom:0px;}
+
+.slbmain .detailBox.CurrentFinancial{background-image:url("../images/product/des01.png");background-position: 640px center;background-repeat:no-repeat;}
+.slbmain .detailBox.CurrentFinancial .con {}
+.slbmain .detailBox.SuperHighYield{background-image:url("../images/product/des02.png");background-position: 60px center;background-repeat:no-repeat;}
+.slbmain .detailBox.SuperHighYield .con { padding-left:410px;}
+.slbmain .detailBox.InnovationMode{background-image:url("../images/product/des03.png");background-position: 640px center;background-repeat:no-repeat;}
+.slbmain .detailBox.InnovationMode .con { }
+.slbmain .detailBox.DecentralizedInvestment{background-image:url("../images/product/des04.png");background-position: 60px center;background-repeat:no-repeat;}
+.slbmain .detailBox.DecentralizedInvestment .con {padding-left:410px;}
+
+/*TAB默认样式*/
+.tab_menu_box { background-color:#f4f4f4;}
+.tab_menu_box .tab_ul { border-left: solid 1px #e9e9e9;border-right: solid 1px #e9e9e9; float:left;}
+.tab_menu_box .tab_ul .current{color: #f4a51d;background-color: #ffffff;height:40px;border-top: 4px solid #f4a51d; line-height:36px; margin-bottom:-1px;}
+.tab_menu_box .tab_ul li{font-weight: normal;float:left;;min-width:90px;padding:0 22px;text-align:center;cursor:pointer;font-size:16px; line-height:42px;background: #e9e9e9;border-top: 1px solid #e9e9e9;}
+.tab_content_box { padding:20px; background-color:#ffffff; border: solid 1px #e9e9e9;}
+
+.slbmain .DebtGroup { overflow:hidden;}
+.slbmain .DebtGroup .DebtGroup_info { padding-bottom:15px;}
+.slbmain .DebtGroup .DebtGroup_info span { display:inline-block; padding-right:20px;}
+.slbmain .noLogin { text-align:center; font-size:16px; padding:20px 0px;}
+#loan_details { width:600px;}
+#loan_details .popinfo { overflow:hidden; margin-bottom:15px;}
+#loan_details .popinfo .box { width:30%; float:left;}
+#loan_details .datamain { overflow-y:auto;overflow-x:hidden; max-height:385px;}
+
+.s-table{table-layout:fixed;width:100%;line-height:1.5; font-size:14px;}
+.s-table th{padding:5px;border:1px solid #e6e6e6;background-color:#f4f4f4;font-size:14px; text-align:center;}
+.s-table td{padding:5px;border:1px solid #e9e9e9; text-align:center;}
+.s-table tbody tr:hover{background:#f9f9f9;}
+
+
+/*善林理财页面
+.sllc {padding:15px 0px;}
+.sllc .info { overflow:hidden; padding:20px; background-color:#FFF; margin-bottom:15px;}
+.sllc .info .img { float:left; padding-right:40px; line-height:0px;}
+.sllc .info .boxone,.sllc .info .boxtwo,.sllc .info .boxthree,.sllc .info .boxfour { float:left; padding-right:40px; line-height:30px; padding-top:10px;}
+.sllc .info .boxone { text-align:center;}
+.sllc .info .boxtwo {}
+.sllc .info .boxthree {}
+.sllc .info .boxfour {}
+
+.sllc .group { overflow:hidden;}
+.sllc .group .box { width:201px; float:left; text-align:center; height:80px; background-color:#FFF; padding:250px 20px 20px 20px; margin-right:5px;}
+.sllc .group .box .money { padding:10px 0px;}
+.sllc .group .box .money {}
+.sllc .group .box.last { margin-right:0px;}
+
+.sllcbuy {padding:15px 0px;}
+.sllcbuy .introduce {overflow:hidden; padding:20px; background-color:#FFF; margin-bottom:15px;}
+.sllcbuy .introduce .box {float:left; padding-right:40px; line-height:30px;}
+.sllcbuy .sllcbuyform { }
+.sllcbuy .sllcbuyform .buymoneyform { margin-bottom:30px; margin-top:30px;}
+.sllcbuy .sllcbuyform .buymoneyform li { margin-bottom:24px;}
+.sllcbuy .sllcbuyform .buymoneyform li .ui-btn { margin-left:5px;height:38px; line-height:38px; }
+*/
+
+

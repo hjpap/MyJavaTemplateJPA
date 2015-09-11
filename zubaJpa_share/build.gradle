@@ -1,0 +1,48 @@
+description = '共享JAR'
+
+ext {
+	springVersion = '4.1.6.RELEASE'
+}
+
+dependencies { 
+
+	compile "com.fasterxml.jackson.core:jackson-core:2.4.5"
+	compile "com.fasterxml.jackson.core:jackson-databind:2.4.5"
+	compile "com.fasterxml.jackson.core:jackson-annotations:2.4.5"
+
+	compile 'org.slf4j:slf4j-api:1.7.12'
+	
+	//compile ("org.springframework:spring-context:$springVersion")
+	//compile ("org.springframework:spring-context-support:$springVersion")
+	//compile "org.springframework:spring-aop:$springVersion"
+	//compile ("org.springframework:spring-tx:$springVersion")
+	//compile ("org.springframework:spring-orm:$springVersion")
+	//compile ("org.springframework:spring-web:$springVersion")
+	
+	//Bean validate
+    //compile "org.hibernate:hibernate-validator:5.1.3.Final"
+    
+    //compile 'org.springframework.data:spring-data-jpa:1.8.0.RELEASE'
+	compile "org.hibernate:hibernate-entitymanager:4.3.8.Final"
+}
+
+jar {  
+	baseName = 'zubaJpa_share'
+	version = version
+    manifest {  
+       attributes 'Implementation-Title': 'zuba', 
+	   'Implementation-Module': 'zuba share', 
+	   'Implementation-Version': version, 
+	   'Build-Time': new Date().format('yyyy-MM-dd HH:mm:ss') 
+    }  
+}
+
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        repository(url: "http://192.16.150.201:8081/nexus/content/repositories/thirdparty/") {
+//            authentication(userName: "admin", password: "admin123")
+//            pom.groupId = "com.wei.zuba"
+//            pom.artifactId = "zubaJpa_shared"
+//        }
+//    }
+//}

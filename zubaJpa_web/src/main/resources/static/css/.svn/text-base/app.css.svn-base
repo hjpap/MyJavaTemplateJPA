@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+.app { background-color:#f4f5f7;background: url(../images/app/app_bg.png);}
+.app .appmain { position:relative; width:980px; padding-left:10px; padding-right:10px; margin:0px auto;}
+.app .appmain .explain { width:450px;}
+.app .appmain .explain .tit { font-size:40px; margin-bottom:40px;}
+.app .appmain .explain .des { font-size:24px; color:#676767; line-height:40px;}
+.app .appbg {background: url(../images/app/app_banner_bg.png) no-repeat scroll center top;}
+
+
+.appbanner {background: url(../images/app/app_banner.png) no-repeat scroll center center; width:100%;}
+.appbanner .appmain { height:470px;}
+.appbanner .app_qrcode { width:124px; height:126px; position:absolute; top:263px; left:10px;}
+.appbanner .app_btn { width:170px; position:absolute; top:263px; left:145px;}
+.appbanner .app_btn .txt { width:170px; height:60px; line-height:60px; margin-bottom:6px; color:#ffffff; font-size:24px; font-weight:bold;}
+.appbanner .app_btn a { width:170px; height:60px; display:block; background-image: url(../images/app/app_banner_btn.png);background-repeat: no-repeat;background-position: left top; text-indent:-9999px; margin-bottom:6px;}
+.appbanner .app_btn .android {background-position: left top;}
+.appbanner .app_btn .android:hover {background-position: left -60px;}
+.appbanner .app_btn .iphone {background-position: left -120px;}
+.appbanner .app_btn .iphone:hover {background-position: left -180px;}
+.appbanner .img { width:463px; height:540px; position:absolute; right:0px; bottom:-100px;}
+
+.appbanner2,.appbanner3,.appbanner4 { overflow:hidden;}
+
+
+.appbanner2 { width:100%;}
+.appbanner2 .appmain {height:635px;}
+.appbanner2 .appmain .img { width:433px; height:563px; position:absolute; top:30px; left:0px;}
+.appbanner2 .appmain .explain { padding-top:130px;padding-left:500px; width:455px;}
+.appbanner2 .appmain .explain .box { width:455px; height:125px; padding-top:115px;}
+.appbanner2 .appmain .explain .box div { float:left; margin-right:26px;}
+.appbanner2 .appmain .explain .box .box1 { width:125px; height:125px;background-image: url(../images/app/app_banner2_icon_kh.png);background-repeat: no-repeat;background-position: left top;}
+.appbanner2 .appmain .explain .box .box2 { width:125px; height:125px;background-image: url(../images/app/app_banner2_icon_cc.png);background-repeat: no-repeat;background-position: left top;}
+.appbanner2 .appmain .explain .box .box3 { width:125px; height:125px;background-image: url(../images/app/app_banner2_icon_mdn.png);background-repeat: no-repeat;background-position: left top;}
+
+.appbanner3 { width:100%;}
+.appbanner3 .appmain {height:680px;}
+.appbanner3 .appmain .explain { padding-top:250px;}
+.appbanner3 .appmain .explain .tit { margin-bottom:35px;}
+.appbanner3 .appmain .explain .des { line-height:50px;}
+.appbanner3 .appmain .explain .big { font-size:40px; color:#ff7272;}
+.appbanner3 .appmain .img { width:526px; height:586px; position:absolute; bottom:50px; right:0px;}
+
+.appbanner4 { width:100%;}
+.appbanner4 .appmain {height:720px;}
+.appbanner4 .appmain .img { width:431px; height:583px; position:absolute; bottom:60px; left:0px;}
+.appbanner4 .appmain .explain { padding-top:230px;padding-left:500px; width:455px;}
+.appbanner4 .appmain .explain .tit { margin-bottom:35px;}
+.appbanner4 .appmain .explain .big { font-size:40px; color:#ff7272; padding-top:15px; display:block;}
+
+
+
+
+
+
+
+

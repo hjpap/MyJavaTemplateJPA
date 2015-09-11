@@ -1,0 +1,63 @@
+description = 'zuba project'
+
+buildscript {
+    ext {
+        springBootVersion = '1.2.3.RELEASE'
+        springLoadedVersion = '1.2.0.RELEASE'
+
+    }
+    repositories {
+        mavenLocal()
+		mavenCentral()
+		maven { url "http://repo.spring.io/release" }
+		maven { url "http://repo.spring.io/milestone" }
+		maven { url "http://repo.spring.io/snapshot" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+       // classpath ("org.springframework:springloaded:${springLoadedVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:0.4.1.RELEASE")
+    }
+}
+
+allprojects {
+	group = 'com.wei.zuba'
+	version = '1.0.0'
+}
+
+subprojects { 
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'maven'
+	apply plugin: 'idea' 
+	apply plugin: 'eclipse-wtp'	
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		maven { url "http://repo.spring.io/release" }
+		maven { url "http://repo.spring.io/milestone" }
+		maven { url "http://repo.spring.io/snapshot" }
+	}
+
+	sourceCompatibility = 1.7
+	targetCompatibility = 1.7
+
+	tasks.withType(org.gradle.api.tasks.compile.JavaCompile.class).all{ task -> task.options.encoding = 'utf-8' }
+	
+	dependencies {
+		//guava
+		compile "com.google.guava:guava:17.0"
+		//lombok
+		compile "org.projectlombok:lombok:1.14.8"
+		//joda time
+		compile "joda-time:joda-time:2.5"
+		
+		compile "commons-beanutils:commons-beanutils:1.9.2"
+		
+		compile "com.alibaba:fastjson:1.2.5"
+		
+		//common
+		compile "org.apache.commons:commons-lang3:3.1"	
+	}
+}

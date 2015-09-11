@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+/*安全保障*/
+.safe { padding-top:15px; padding-bottom:15px;}
+
+
+/*新手指引*/
+.guide { padding-top:15px; padding-bottom:15px;}
+
+
+
+/*帮助中心*/
+.faq { padding-top:15px; padding-bottom:15px;}
+
+
+
+/*关于我们*/
+.about { padding-top:15px; padding-bottom:15px;}
+
+
+
+
+
+
+
+
+

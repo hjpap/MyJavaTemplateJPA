@@ -1,0 +1,40 @@
+10
+
+dir
+10812
+http://192.16.150.215/slsvn/SLNew/branches/v1.0.25.20150706/ShanLinBao/web/src/main/resources/static
+http://192.16.150.215/slsvn/SLNew
+
+
+
+2015-08-07T10:26:54.683196Z
+10792
+wangw
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2471585d-e245-443a-a77e-8c03146ebc60
+
+css
+dir
+
+html
+dir
+
+images
+dir
+
+js
+dir
+

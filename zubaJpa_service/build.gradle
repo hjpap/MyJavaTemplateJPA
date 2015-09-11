@@ -1,0 +1,62 @@
+description = 'Service项目'
+
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+
+
+war {
+	baseName = 'zubaJpa_service'
+	version = version
+}
+
+ext {
+
+	dbunitVersion = '2.4.8'
+	h2Version = '1.4.181'
+	springVersion = '4.1.6.RELEASE'
+	junitVersion = '4.12'
+	
+}
+	
+eclipse {
+	classpath {
+		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7'
+	}
+}
+	
+dependencies {
+	compile project(':zubaJpa_share')
+	//lombok
+	providedCompile "org.projectlombok:lombok:1.14.8"
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	compile("org.springframework.boot:spring-boot-starter-context")
+	compile("org.springframework.boot:spring-boot-starter-aop")
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-hateoas")
+	compile("org.springframework.boot:spring-boot-starter-security")
+	compile("javax.servlet:jstl:1.2")
+	compile("javax.servlet:javax.servlet-api")
+	
+	providedCompile ("org.apache.tomcat.embed:tomcat-embed-jasper")
+	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+	
+	testCompile("org.springframework.boot:spring-boot-starter-test") 
+	
+	//compile("org.springframework:spring-jdbc")
+	//compile "org.mybatis:mybatis:3.2.8"
+    //compile "org.mybatis:mybatis-spring:1.2.2"
+    compile 'org.springframework.data:spring-data-jpa:1.8.0.RELEASE'
+    compile "org.hibernate:hibernate-validator:5.1.3.Final"
+	compile "org.hibernate:hibernate-entitymanager:4.3.8.Final"
+	
+    compile "com.alibaba:druid:1.0.13"
+    compile "mysql:mysql-connector-java:5.1.34"
+    
+    //Test dependencies
+	testCompile "org.dbunit:dbunit:$dbunitVersion"
+	//testCompile "com.h2database:h2:$h2Version"
+	testCompile "junit:junit:$junitVersion"
+	testCompile "org.springframework:spring-test:$springVersion"
+}

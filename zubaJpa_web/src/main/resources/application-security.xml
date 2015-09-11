@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xmlns:mvc="http://www.springframework.org/schema/mvc" 
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd ">
+        
+    <!-- 定义上下文返回的消息的国际化。 -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="defaultEncoding" value="UTF-8" />  
+        <property name="useCodeAsDefaultMessage" value="true" />  
+        <property name="cacheSeconds" value="10"></property>  
+        <property name="basenames">  
+            <list>  
+                <value>classpath:zuba_messages</value>  
+                <value>classpath:org/springframework/security/messages_zh_CN</value>
+            </list>  
+        </property> 
+    </bean>
+
+	<!-- 对方法的安全拦截 -->
+	<security:global-method-security jsr250-annotations="enabled" secured-annotations="enabled" />
+	
+    <security:http auto-config="true">
+        <!-- 自定义登录, 登录失败后跳转到登录页面 -->
+        <security:form-login login-page="/login" login-processing-url="/loginPost" authentication-success-handler-ref="loginSuccessHandler" authentication-failure-url="/login"
+            username-parameter="loginName" password-parameter="password"/>
+        <!-- 登出后，删掉cookie， 并跳转到首页 -->
+        <security:logout delete-cookies="JSESSIONID" invalidate-session="false" logout-url="/logout" success-handler-ref="logoutSuccessHandler" />
+
+		<security:intercept-url pattern="/account/**" access="ROLE_USER" />
+		<security:intercept-url pattern="/rewards/**" access="ROLE_USER" />
+		 
+        <security:session-management>
+            <security:concurrency-control max-sessions="1" />
+        </security:session-management>
+
+        <!-- 需要进行权限拦截的uri -->
+      	<security:csrf request-matcher-ref="csrfSecurityRequestMatcher"/> 
+        <!-- security:request-cache ref="alwaysSaveRequestCache"/> -->
+        
+    </security:http>
+	
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider user-service-ref="webUserDetailsService">
+            <security:password-encoder ref="passwordEncoder" />
+        </security:authentication-provider>
+    </security:authentication-manager>
+    
+    <bean id="authenticationFilter"  class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter" >
+		<property name="postOnly" value="false"/>
+		<property name="authenticationManager" ref="authenticationManager"/>
+	</bean>
+	
+	<!-- bean name="securityUrlProvider" class="com.slfinance.shanlinbao.util.SecurityUrlProvider" init-method="init" lazy-init="false" /> -->
+	<bean name="businessInterceptor" class="com.wei.zuba.inteceptor.BusinessInterceptor" />
+
+    <!-- 登录失败处理，暂时不使用 <bean id="authLoginFailureHandler" class="com.slfinance.service.security.AuthLoginFailureHandler" /> -->
+    <!-- 登录成功后，把当前登录客户信息放入到session中，便于前端界面获取 -->
+    <bean id="loginSuccessHandler" class="com.wei.zuba.security.LoginSuccessHandler">
+        <!-- <property name="defaultTargetUrl" value="/user" />
+        <property name="forwardToDestination" value="false" /> -->
+        <property name="targetUrlParameter" value="next"/>
+        <property name="defaultTargetUrl" value="/account/"/>
+        <!-- <property name="useReferer" value="true"/> -->
+    </bean>
+
+    <bean id="logoutSuccessHandler" class="com.wei.zuba.security.LogoutSuccessHandler" />
+
+    <!-- 用户登录时，输入密码不进行加密处理，由后台进行验证 -->
+    <bean id="passwordEncoder" class="com.wei.zuba.security.WebPasswordEncoder" />
+
+ 
+    <!-- 权限认证事件监听器 
+    <bean id="customAuthenticationEventListener" class="com.slfinance.shanlinbao.security.CustomAuthenticationEventListener" />
+    <bean id="authenticationListener" class="org.springframework.security.authentication.event.LoggerListener" />
+    <bean id="authorizationListener" class="org.springframework.security.access.event.LoggerListener" />
+    <bean id="alwaysSaveRequestCache" class="com.slfinance.shanlinbao.security.AlwaysSaveRequestCache"></bean>
+    
+    -->
+    
+ 	<!-- csrf过滤 -->
+    <bean id="csrfSecurityRequestMatcher" class="com.wei.zuba.security.CsrfSecurityRequestMatcher">
+         <property name="execludeUrls">
+             <list>
+             	<!-- 调用logout的时候不需要csrf -->
+                <value>/logout</value>
+             </list>
+         </property>
+    </bean>
+    
+</beans>

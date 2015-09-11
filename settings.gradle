@@ -1,0 +1,1 @@
+include "zubaJpa_web", "zubaJpa_service", "zubaJpa_share"

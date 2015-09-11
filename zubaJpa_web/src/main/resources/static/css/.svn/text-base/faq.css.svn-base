@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+.faq {}
+
+.faq .amenu { }
+.faq .amenu { height:60px; width:100%;border-bottom:solid 4px #f4a51d;}
+.faq .amenu ul { }
+.faq .amenu ul li { float:left; position:relative; margin:0px 20px;}
+.faq .amenu ul li a { text-align:center; line-height:60px; height:60px; float:left; color:#606060; font-size:17px; padding:0px 15px;}
+.faq .amenu ul li a:hover { color:#f4a51d;}
+.faq .amenu ul li.selected a { color:#f4a51d;}
+.faq .amenu ul li.selected em {background-image: url(../images/faq/menu_bg_hover.png);background-repeat:repeat;background-position: center top; height:12px; width:22px; display:block; position:absolute; bottom:-2px; left:50%; margin-left:-11px;}
+
+.main { padding:30px 0px;}
+
+
+.faq .faqlin { padding-bottom:30px;}
+.faq .faqlin .tcolor {color: #000; font-size:18px;padding:0px 10px 5px 0px; margin-bottom:5px;}
+.faq .faqlin .tit {color: #000; font-size:18px; border-bottom:dashed 1px #ffdc9f; padding:0px 0px 5px 0px; margin-bottom:5px;}
+.faq .faqlin .con {}
+
+
+
+/*数据表格*/
+
+.m-table th{border:2px solid #fff;padding:10px 20px;background-color:#ddd;color:#434343;font-size:15px;}
+.m-table{table-layout:fixed;width:100%;line-height:1.5; /*border:1px solid #e6e6e6;*/ font-size:14px;}
+.m-table td{border:2px solid #fff;padding:10px 20px;}
+.m-table tbody tr:nth-child(2n){background:#f5f5f5;}
+
+
+/*新手指引*/
+.guide .box2 { padding:50px 0px;}
+.guide .box2 .tit { margin-bottom:20px;}
+.guide .box2 .img { text-align:center;}
+
+.guide.box3 { background-color:#f3f3f3; width:100%; padding:40px 0px; margin-bottom:30px;}
+.guide.box3 .img { text-align: center;}
+
+
+.guide .banner { width:100%; background-color:#f5a41d; padding:40px 0px;}
+.guide .banner .bannertit { text-align:center; margin-bottom:30px;}
+.guide .slideBox { width:850px; margin:0px auto; position:relative;}
+.guide .slideBox .bd img { border: solid 8px #e8e8e8;}
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.guide .slideBox .prev,
+.guide .slideBox .next{ position:absolute; left:-55px; top:50%; margin-top:-25px; display:block; width:25px; height:92px; background:url(../images/icon/slider-arrow.png) -44px 0px no-repeat;opacity:0.5;}
+.guide .slideBox .next{ left:auto; right:-55px; background-position:0px 0px; }
+.guide .slideBox .prev:hover,
+.guide .slideBox .next:hover{ opacity:1;  }
+/*按钮位置 */
+.guide .slideBox .hd{ width:100%; height:76px; text-align:center; margin-bottom:38px;}
+.guide .slideBox .hd ul{ text-align:center; z-index:1; display:inline-block; margin:0px auto;background-image: url(../images/faq/banner_menu_bg.gif);background-repeat: repeat-x; background-position:left center;}
+.guide .slideBox .hd ul li { cursor:pointer; display: inline-block; width:88px; height:78px; text-align:center; line-height:78px; color:#ffffff; font-size:25px; margin-right:64px; background-image: url(../images/faq/banner_menu.jpg);background-repeat: no-repeat; overflow:hidden;}
+.guide .slideBox .hd ul li.on {background-position: 0px -78px; color:#f5a41d;}
+.guide .slideBox .hd ul li.last { margin-right:0px;}
+
+

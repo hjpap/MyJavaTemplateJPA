@@ -1,0 +1,32 @@
+var publishVersion = '@version@';
+var version = '20141111';
+
+if(publishVersion.indexOf('@') < 0){
+	version = publishVersion;
+}
+
+seajs.config({
+	base: "/js/",
+	alias: {
+		"jquery": "jquery/jquery.js",
+		"superslide": "plugin/SuperSlide/jquery.SuperSlide.2.1.js",
+		"validate": "plugin/validate/jquery.validate.js",
+		"validation": "plugin/validate/jquery.validate.ex.js",
+		"bootstrap-datepicker": "plugin/bootstrap/bootstrap-datepicker/bootstrap-datepicker.js",
+		"layer": "plugin/layer/layer.min.js",
+		"layerui": "plugin/layer/skin/layer.css",
+		"serialize":"plugin/serialize/serialize.js",
+		"xdate":"plugin/xdate/xdate.js",
+		"des":"plugin/security/des.js",
+		"highcharts": "plugin/highcharts/highcharts.js",
+		"plupload": "plugin/plupload/js/plupload.full.min.js",
+		"plupload-ui" : "plugin/plupload/js/jquery.ui.plupload/jquery.ui.plupload.js",
+		"plupload-queue": "plugin/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js",
+		"plupload-zh_CN": "plugin/plupload/js/i18n/zh_CN.js",
+		"jcrop":"plugin/jcrop/js/jquery.Jcrop.js",
+		"select2":"plugin/select2/select2.min.js"
+	},
+	map: [
+	    	//[ /^(.*\.(?:css|js))(.*)$/i, '$1?v=' + version ]
+		]
+});

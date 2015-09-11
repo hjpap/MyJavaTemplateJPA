@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+body { background-color:#f4f4f4;}
+@-webkit-keyframes bounce {0%, 20%, 50%, 80%, 100% {-webkit-transform:translateY(0)}40% {-webkit-transform:translateY(-9px)}60% {-webkit-transform:translateY(-3px)}}
+@-moz-keyframes bounce {0%, 20%, 50%, 80%, 100% {-moz-transform:translateY(0)}40% {-moz-transform:translateY(-9px)}60% {-moz-transform:translateY(-3px)}}
+
+/*首页幻灯*/
+.fullSlide{ width:100%; position:relative; height:360px; z-index:99;}
+.fullSlide .bd{ margin:0 auto; position:relative; z-index:0; overflow:hidden; width:100%;}
+.fullSlide .bd ul{ width:100% !important; height:360px;  }
+.fullSlide .bd li{ width:100% !important;height:360px;overflow:hidden; text-align:center;background-repeat: no-repeat;background-position: center center;}
+.fullSlide .bd li a{ display:block; height:360px;padding:0; margin:0; }
+.fullSlide .hd{ width:100%;  position: relative; bottom:22px; height:8px; line-height:8px; z-index:9;}
+.fullSlide .hd ul{ text-align:center; z-index:9; width:100%;position:absolute; left:50%; margin-left:-230px;}
+.fullSlide .hd ul li{ cursor:pointer; display:block;width:67px; height:8px; margin:0px 5px 0px 5px; overflow:hidden; background-color:#FFF;-moz-border-radius:3px;-webkit-border-radius:2px;border-radius:2px;text-indent:-9999px; float:left;}
+.fullSlide .hd ul .on{ background-color:#ba1414;}
+
+/*前/后按钮代码 */
+.fullSlide .prev,
+.fullSlide .next{ position:absolute; left:35px; top:50%; margin-top:-25px; display:block; width:25px; height:92px; background:url(../images/icon/slider-arrow.png) -44px 0px no-repeat;opacity:0.5;}
+.fullSlide .next{ left:auto; right:35px; background-position:0px 0px; }
+.fullSlide .prev:hover,
+.fullSlide .next:hover{ opacity:1;  }
+
+.notice { font-size:15px;line-height:28px; border:1px solid #e0e0e0; border-top:none; background: #ffffff; overflow:hidden;}
+.notice .notice-con { width:888px; overflow:hidden; padding:15px; float:left;}
+.notice .notice-con .cty { float:left; width:100px; border-right: solid 1px #e0e0e0; text-align:center;}
+.notice .notice-con .tit { float:left; width:630px; padding-left:25px;}
+.notice .notice-con .time { float:right; width:100px;}
+.notice .notice-close { width:58px; height:58px; float:right;border-left: solid 1px #e0e0e0;background:url(../images/icon/notice-close.png) center center no-repeat; text-indent:-9999px;}
+
+
+.feed { padding-bottom:30px; overflow:hidden;}
+.feed .title { background-color:#e7d4b6; line-height:50px; height:50px; padding-left:20px; color:#ffffff; font-size:26px; margin-bottom:5px;}
+.feed .feedbox { float:left; width:286px; margin-right:15px; height:330px; border-top:solid 7px #e7d4b6; background-color:#fff; padding:10px 15px 15px 15px;}
+.feed .feedbox.last { margin-right:0px;}
+.feed .feedbox h2 { color:#494949;}
+.feed .feedbox .more { text-align:right; font-family: "SimSun";}
+.feed .feedbox .more a { color:#494949;}
+
+.feed .feedbox .newslist {}
+.feed .feedbox .newslist li { border-bottom: solid 1px #efefef; padding-bottom:10px; margin-bottom:10px; height:67px;}
+.feed .feedbox .newslist li a {color:#747474;}
+.feed .feedbox .newslist li a:hover { color:#f4a51d;}
+.feed .feedbox .newslist li .date { font-size:16px; color:#1f1f1f;}
+.feed .feedbox .newslist li a:hover .date { color:#f4a51d;}
+.feed .feedbox .newslist li .tit {}
+.feed .feedbox .newslist li.last { border:0px;}
+
+.feed .feedbox .partnerslist { text-align:center;}
+.feed .feedbox .partnerslist li { border-bottom: solid 1px #efefef; padding-bottom:10px; margin-bottom:10px; height:67px;}
+.feed .feedbox .partnerslist li.last { border:0px;}
+
+.feed .feedbox .faqlist {}
+.feed .feedbox .faqlist li { border-bottom: solid 1px #efefef; padding-bottom:10px; margin-bottom:10px; height:67px;}
+.feed .feedbox .faqlist li a {color:#747474;}
+.feed .feedbox .faqlist li a:hover { color:#f4a51d;}
+.feed .feedbox .faqlist li .tit { font-size:16px; color:#1f1f1f;}
+.feed .feedbox .faqlist li a:hover .tit { color:#f4a51d;}
+.feed .feedbox .faqlist li .des {}
+.feed .feedbox .faqlist li.last { border:0px;}
+
+
+.characteristic { overflow:hidden;background-image: url(../images/index/characteristic_bg.png);background-position: center top;padding-top:7px;}
+.characteristic .icon_stic { width:56px; height:55px; display:block;background-image: url(../images/index/characteristic_icon.png);background-repeat: no-repeat;background-position: center top; float:left;}
+.characteristic characteristic_f .icon_stic {background-position: center 0px;}
+.characteristic characteristic_a .icon_stic {background-position: center -55px;}
+.characteristic characteristic_g .icon_stic {background-position: center -110px;}
+
+.characteristic .box {float: left;width: 266px;color: #ffffff;padding: 15px 45px 15px 15px;}
+.characteristic .box .con { float:left; padding-left:10px;}
+.characteristic .box h3 { padding-bottom:5px; font-weight:normal;}
+.characteristic .box p { font-size:14px; line-height:22px; margin-bottom:0px;}
+
+
+.homeproducts { padding-top:40px; padding-bottom:40px;}
+
+.statistics { font-size:16px; overflow:hidden; background-color:#ffffff; width:300px; float:right; height:370px;}
+.statistics ul { padding:25px; overflow:hidden;}
+.statistics li { float:right; border-top:solid 1px #f6ece0; text-align:right; padding-top:15px; margin-top:15px;}
+.statistics li.clearfix { width:100%; float:right; margin-top:0px; padding-top:0px; border:0px; height:0px; line-height:0px;}
+.statistics li.first { border-top:0px;padding-top:0px; margin-top:0px;}
+.statistics .num { color:#ffa100; font-size:24px; height:30px; line-height:30px; background-image: url(../images/index/statistics_icon.png);background-repeat: no-repeat;background-position: left top; padding-left:40px; margin-bottom:5px;}
+.statistics .TurnoverAmount .num {background-position: left 0px; color:#ff6600; }
+.statistics .TurnoverRecord .num {background-position: left -30px; color:#ff9900;}
+.statistics .TurnoverEarn .num {background-position: left -60px; color:#c3a176;}
+
+.homeslb {overflow:hidden; width:660px; float:left;}
+.homeslb .investh { width:610px; border: solid 5px #f4a51d; height:125px; margin-bottom:20px; background-color:#fff9ef; padding:20px; background-image: url(../images/index/invest_hbg.png);background-repeat: no-repeat;background-position: right top;}
+.homeslb .investh .tit { overflow:hidden;}
+.homeslb .investh .tit h2 { height:43px; float:left;}
+.homeslb .investh .tit .warn { height:27px; line-height:27px; background-color:#ededed; color:#656565;padding:0px 10px; margin:5px 0px 0px 15px;float:left;}
+.homeslb .investh .tit .ensure { float:right; color:#a8a8a8; font-size:16px; padding-top:10px; padding-right:25px;}
+.homeslb .investh .con { overflow:hidden;}
+.homeslb .investh .con .income{ font-size:16px; width:240px; float:left; padding-top:12px;}
+.homeslb .investh .con .income span {font-size:52px; height:52px; line-height:52px; position:relative; margin-right:5px; color:#f4a51d;}
+.homeslb .investh .con .income .subsidy {line-height:23px;font-size:13px;color:#fff;background:#f4a51d;padding-left:5px; padding-right:5px; float:left; margin-top:10px; position:absolute; right:-60px; top:0px;}
+.homeslb .investh:hover .con .income .subsidy {-webkit-animation:bounce 1s .2s ease both;-moz-animation:bounce 1s .2s ease both}
+.homeslb .investh .con .intime { font-size:36px; color:#808080; overflow:hidden; width:180px; float:left; padding-top:10px;}
+.homeslb .investh .con .inbtn { width:190px; float:left; text-align:center;}
+.homeslb .investh .con .inbtn .lot { padding-bottom:5px;}
+.homeslb .investh .con .inbtn .ui-btn { min-width:138px; height:40px; line-height:40px; font-size:18px;}
+
+.homeslb .investt { width:610px; border: solid 5px #fe4f29; height:125px; background-color:#fff9ef; padding:20px; background-image: url(../images/index/invest_tbg.png);background-repeat: no-repeat;background-position: right top;}
+.homeslb .investt .tit { overflow:hidden;}
+.homeslb .investt .tit h2 { height:43px; float:left;}
+.homeslb .investt .tit .warn { height:27px; line-height:27px; background-color:#ededed; color:#656565;padding:0px 10px; margin:5px 0px 0px 15px;float:left;}
+.homeslb .investt .tit .ensure { float:right; color:#a8a8a8; font-size:16px; padding-top:10px; padding-right:25px;}
+.homeslb .investt .con { overflow:hidden;}
+.homeslb .investt .con .income{ font-size:16px; width:240px; float:left; padding-top:12px;}
+.homeslb .investt .con .income span {font-size:52px; height:52px; line-height:52px; position:relative; margin-right:5px; color:#fe4f29;}
+.homeslb .investt .con .income .subsidy {line-height:23px;font-size:13px;color:#fff;background:#fe4f29;padding-left:5px; padding-right:5px; float:left; margin-top:10px; position:absolute; right:-60px; top:0px;}
+.homeslb .investt:hover .con .income .subsidy {-webkit-animation:bounce 1s .2s ease both;-moz-animation:bounce 1s .2s ease both}
+.homeslb .investt .con .intime { font-size:36px; color:#808080; overflow:hidden; width:180px; float:left; padding-top:10px;}
+.homeslb .investt .con .inbtn { width:190px; float:left; text-align:center;}
+.homeslb .investt .con .inbtn .lot { padding-bottom:5px;}
+.homeslb .investt .con .inbtn .ui-btn { min-width:138px; height:40px; line-height:40px; font-size:18px; background-color:#ff6948;}
+.homeslb .investt .con .inbtn .ui-btn:hover {background-color:#fe4f29;}
+
+.regbox{width:196px; height:226px; z-index:99999;position:absolute; left:50%; margin-left:240px; top:38px; background-color:#ffffff; padding:27px; text-align:center;-webkit-opacity: 0.8;-moz-opacity: 0.8;-khtml-opacity: 0.8; opacity: .8;filter:alpha(opacity=80);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  }
+.regbox .con { color:#b81b26;}
+.regbox .con .headline {font-size:20px; }
+.regbox .con .rate { font-size:70px; line-height:70px; height:70px; padding:10px 0px;}
+.regbox .con .rate small { font-size:18px;}
+.regbox .con .point { font-size:14px; color:#444444;}
+.regbox .btn { padding:20px 0px 10px 0px;}
+.regbox .btn .ui-btn { line-height:37px; height:37px; font-size:18px; min-width:100%;border-radius:20px; }
+.regbox .regbtn {}
+.regbox .regbtn a { color:#bf9968;}
+
+
+
+
+
+
+
+
+
+
+
+
