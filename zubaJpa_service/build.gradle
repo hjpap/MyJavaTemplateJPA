@@ -16,7 +16,6 @@ ext {
 	h2Version = '1.4.181'
 	springVersion = '4.1.6.RELEASE'
 	junitVersion = '4.12'
-	
 }
 	
 eclipse {
@@ -31,7 +30,6 @@ dependencies {
 	//lombok
 	providedCompile "org.projectlombok:lombok:1.14.8"
 	compile("org.springframework.boot:spring-boot-starter-actuator")
-	compile("org.springframework.boot:spring-boot-starter-context")
 	compile("org.springframework.boot:spring-boot-starter-aop")
 	compile("org.springframework.boot:spring-boot-starter-web")
 	compile("org.springframework.boot:spring-boot-starter-hateoas")
@@ -56,7 +54,7 @@ dependencies {
     
     //Test dependencies
 	testCompile "org.dbunit:dbunit:$dbunitVersion"
-	//testCompile "com.h2database:h2:$h2Version"
+	testCompile "com.h2database:h2:$h2Version"
 	testCompile "junit:junit:$junitVersion"
 	testCompile "org.springframework:spring-test:$springVersion"
 }
